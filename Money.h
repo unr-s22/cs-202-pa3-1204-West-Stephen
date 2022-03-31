@@ -36,11 +36,11 @@ class Money {
 		return cents != other.cents;
 	}
 	Money operator - (const Money& other){
-		Money mon(0, cents + other.cents);		
+		Money mon(0, cents - other.cents);		
 		return mon;
 	}
 	Money operator + (const Money& other){
-		Money mon(0, cents - other.cents);		
+		Money mon(0, cents + other.cents);		
 		return mon;
 	}
 	friend std::ostream& operator << (std::ostream& out, const Money& other);
